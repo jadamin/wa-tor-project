@@ -43,11 +43,11 @@ class Poisson:
             coup_possible.append((self.x, (self.y-1)% monde.hauteur))
         if monde.grille [(self.y +1) % monde.hauteur][self.x] == None :
             coup_possible.append((self.x, (self.y+1)% monde.hauteur))
-        if monde.grille [(self.x -1) % monde.largueur][self.y] == None :
-            coup_possible.append((self.y, (self.x-1)% monde.largueur))
-        if monde.grille [(self.x +1) % monde.largueur][self.y] == None :
-            coup_possible.append((self.y, (self.x+1)% monde.largueur))
-
+        if monde.grille [self.y][(self.x -1) % monde.largueur] == None :
+            coup_possible.append(((self.x-1)% monde.largueur), self.y)
+        if monde.grille [self.y][(self.x +1) % monde.largueur] == None :
+            coup_possible.append(((self.x+1)% monde.largueur), self.y)
+        return coup_possible
 
     def se_deplacer(self, monde):
         pass
