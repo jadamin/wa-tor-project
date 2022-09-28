@@ -15,7 +15,17 @@ class Monde:
             print(ligne)
 
     def peupler(self, nb_poisson, nb_requin):
-      pass
+        for i in range (nb_poisson):
+            x_rand = randint( 0, self.largeur-1 )
+            y_rand = randint ( 0 , self.hauteur-1 )
+            if self.grille [y_rand] [x_rand] == None :
+                self.grille [y_rand] [x_rand] = Poisson (x_rand , y_rand)
+        for i in range (nb_requin):
+            x_rand = randint( 0, self.largeur-1 )
+            y_rand = randint ( 0 , self.hauteur-1 )
+            if self.grille [y_rand] [x_rand] == None :
+                self.grille [y_rand] [x_rand] = Requin (x_rand , y_rand)
+       
 
     def jouer_un_tour(self):
         pass
@@ -56,7 +66,7 @@ class Requin:
         pass
 
     def se_reproduire ():
-        pass
+        pass       
 
     def manger_poisson ():
         pass
@@ -65,7 +75,5 @@ class Requin:
 
 
 monde = Monde (8 , 10)
+monde.peupler (2 , 3)
 monde.afficher_monde ()
-fish = Poisson (3 , 1)
-sharq = Requin ( 2 , 1)
-print(Poisson)
