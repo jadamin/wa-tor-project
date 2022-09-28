@@ -1,4 +1,5 @@
-from random import randint, choice
+from random import randint, choice, random
+from re import X
 from time import sleep
 import os
 
@@ -14,7 +15,57 @@ class Monde:
             print(ligne)
 
     def peupler(self, nb_poisson, nb_requin):
-        for i in range
+      pass
+
+    def jouer_un_tour(self):
+        pass
+
+class Poisson:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.compteur_reproduction = 0
+
+    
+    def deplacement_possible(self, monde):
+        pass
+    
+    def se_deplacer(self, monde):
+        pass
+        
+    def vivre_une_journee(self, monde):
+        pass
+
+    def se_reproduire () :
+        pass
+
+class Requin:
+    def __init__(self , x , y) -> None:
+        self.x = x
+        self.y = y
+        self.compteur_reproduction = 0
+        self.energie = 6
+
+    def deplacement_possible (self , monde):
+        pass
+
+    def se_deplacer (self , monde):
+        pass
+
+    def vivre_une_journee (self , monde):
+        pass
+
+    def se_reproduire ():
+        pass
+
+    def manger_poisson ():
+        pass
+        
+
+
 
 monde = Monde (8 , 10)
 monde.afficher_monde ()
+fish = Poisson (3 , 1)
+sharq = Requin ( 2 , 1)
+print(Poisson)
