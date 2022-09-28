@@ -38,8 +38,17 @@ class Poisson:
 
     
     def deplacement_possible(self, monde):
-        pass
-    
+        coup_possible = []
+        if monde.grille [(self.y -1) % monde.hauteur][self.x] == None :
+            coup_possible.append((self.x, (self.y-1)% monde.hauteur))
+        if monde.grille [(self.y +1) % monde.hauteur][self.x] == None :
+            coup_possible.append((self.x, (self.y+1)% monde.hauteur))
+        if monde.grille [(self.x -1) % monde.largueur][self.y] == None :
+            coup_possible.append((self.y, (self.x-1)% monde.largueur))
+        if monde.grille [(self.x +1) % monde.largueur][self.y] == None :
+            coup_possible.append((self.y, (self.x+1)% monde.largueur))
+
+
     def se_deplacer(self, monde):
         pass
         
